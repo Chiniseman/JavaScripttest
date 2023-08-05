@@ -37,8 +37,8 @@ function recalculate() {
 
     let cost;
  
-     if (document.getElementById("model-text") == "Model XYZ") {cost = duration * 100}
-     if(document.getElementById("model-text") == "Model CPRG") {cost = duration * 213}
+     if (modelName == "Model XYZ") {cost = duration * 100;}
+     if(modelName == "Model CPRG") {cost = duration * 213;}
  
      document.getElementById("calculated-cost").innerHTML = cost;
      
@@ -56,7 +56,7 @@ function recalculate() {
      - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
      - then, recalculate() the total cost.
  - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
- modelButton.addEventListener("click", changeModel);
+
  // INSERT YOUR CODE HERE
  
  const modelButton = document.getElementById("model-button");
@@ -77,7 +77,7 @@ function recalculate() {
  
  }
  
- 
+ modelButton.addEventListener("click", changeModel);
  
  /****************** duration button logic ******************/
  /*  - first, create a variable to represent the "Change Duration" pseudo-button.
@@ -89,6 +89,8 @@ function recalculate() {
          - recalculate() the total cost/
      - finally, attach this function to the "Change Duration" pseudo-button, so it runs whenever the button is clicked.
  */
+
+
  
  // INSERT YOUR CODE HERE
 
@@ -107,3 +109,5 @@ function recalculate() {
      recalculate();
  
  }
+
+ durationbutton.addEventListener("click", changeModel);
